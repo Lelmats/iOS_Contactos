@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		3D27A4132901A50E00E11DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4122901A50E00E11DB3 /* AppDelegate.swift */; };
 		3D27A4152901A50E00E11DB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4142901A50E00E11DB3 /* SceneDelegate.swift */; };
-		3D27A4172901A50E00E11DB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4162901A50E00E11DB3 /* ViewController.swift */; };
+		3D27A4172901A50E00E11DB3 /* ContactosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4162901A50E00E11DB3 /* ContactosController.swift */; };
 		3D27A41A2901A50E00E11DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D27A4182901A50E00E11DB3 /* Main.storyboard */; };
 		3D27A41C2901A51000E11DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D27A41B2901A51000E11DB3 /* Assets.xcassets */; };
 		3D27A41F2901A51000E11DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D27A41D2901A51000E11DB3 /* LaunchScreen.storyboard */; };
 		3D27A42A2901A51000E11DB3 /* iOS_ContactosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4292901A51000E11DB3 /* iOS_ContactosTests.swift */; };
 		3D27A4352901A51000E11DB3 /* iOS_ContactosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4342901A51000E11DB3 /* iOS_ContactosUITests.swift */; };
+		3D27A4472901A9BD00E11DB3 /* Contacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4462901A9BD00E11DB3 /* Contacto.swift */; };
+		3D27A4492901AB9400E11DB3 /* CeldaContactosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4482901AB9400E11DB3 /* CeldaContactosController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		3D27A40F2901A50E00E11DB3 /* iOS_Contactos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Contactos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D27A4122901A50E00E11DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D27A4142901A50E00E11DB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D27A4162901A50E00E11DB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D27A4162901A50E00E11DB3 /* ContactosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosController.swift; sourceTree = "<group>"; };
 		3D27A4192901A50E00E11DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D27A41B2901A51000E11DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D27A41E2901A51000E11DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		3D27A4302901A51000E11DB3 /* iOS_ContactosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_ContactosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D27A4342901A51000E11DB3 /* iOS_ContactosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ContactosUITests.swift; sourceTree = "<group>"; };
 		3D27A4362901A51000E11DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D27A4462901A9BD00E11DB3 /* Contacto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacto.swift; sourceTree = "<group>"; };
+		3D27A4482901AB9400E11DB3 /* CeldaContactosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaContactosController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				3D27A4112901A50E00E11DB3 /* iOS_Contactos */,
-				3D27A4282901A51000E11DB3 /* iOS_ContactosTests */,
 				3D27A4332901A51000E11DB3 /* iOS_ContactosUITests */,
+				3D27A4282901A51000E11DB3 /* iOS_ContactosTests */,
 				3D27A4102901A50E00E11DB3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,13 +103,11 @@
 		3D27A4112901A50E00E11DB3 /* iOS_Contactos */ = {
 			isa = PBXGroup;
 			children = (
-				3D27A4122901A50E00E11DB3 /* AppDelegate.swift */,
-				3D27A4142901A50E00E11DB3 /* SceneDelegate.swift */,
-				3D27A4162901A50E00E11DB3 /* ViewController.swift */,
-				3D27A4182901A50E00E11DB3 /* Main.storyboard */,
+				3D27A4452901A97500E11DB3 /* Modelos */,
+				3D27A4442901A53300E11DB3 /* Controllers */,
+				3D27A4422901A51800E11DB3 /* Storyboards */,
+				3D27A4432901A52600E11DB3 /* App */,
 				3D27A41B2901A51000E11DB3 /* Assets.xcassets */,
-				3D27A41D2901A51000E11DB3 /* LaunchScreen.storyboard */,
-				3D27A4202901A51000E11DB3 /* Info.plist */,
 			);
 			path = iOS_Contactos;
 			sourceTree = "<group>";
@@ -126,6 +128,42 @@
 				3D27A4362901A51000E11DB3 /* Info.plist */,
 			);
 			path = iOS_ContactosUITests;
+			sourceTree = "<group>";
+		};
+		3D27A4422901A51800E11DB3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3D27A4182901A50E00E11DB3 /* Main.storyboard */,
+				3D27A41D2901A51000E11DB3 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		3D27A4432901A52600E11DB3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3D27A4202901A51000E11DB3 /* Info.plist */,
+				3D27A4122901A50E00E11DB3 /* AppDelegate.swift */,
+				3D27A4142901A50E00E11DB3 /* SceneDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		3D27A4442901A53300E11DB3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D27A4162901A50E00E11DB3 /* ContactosController.swift */,
+				3D27A4482901AB9400E11DB3 /* CeldaContactosController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3D27A4452901A97500E11DB3 /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				3D27A4462901A9BD00E11DB3 /* Contacto.swift */,
+			);
+			name = Modelos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D27A4172901A50E00E11DB3 /* ViewController.swift in Sources */,
+				3D27A4472901A9BD00E11DB3 /* Contacto.swift in Sources */,
+				3D27A4172901A50E00E11DB3 /* ContactosController.swift in Sources */,
 				3D27A4132901A50E00E11DB3 /* AppDelegate.swift in Sources */,
 				3D27A4152901A50E00E11DB3 /* SceneDelegate.swift in Sources */,
+				3D27A4492901AB9400E11DB3 /* CeldaContactosController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

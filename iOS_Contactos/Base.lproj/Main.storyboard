@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
-        <!--Add Controller-->
+        <!--AddController-->
         <scene sceneID="UHp-ll-Edj">
             <objects>
-                <viewController id="TJj-tC-rv0" userLabel="Add Controller" sceneMemberID="viewController">
+                <viewController id="TJj-tC-rv0" userLabel="AddController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWu-8g-w6T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="-648" y="139"/>
         </scene>
-        <!--Edit Controller-->
+        <!--EditController-->
         <scene sceneID="X4X-0u-Qcj">
             <objects>
-                <viewController id="KzS-Ke-d6B" userLabel="Edit Controller" sceneMemberID="viewController">
+                <viewController id="KzS-Ke-d6B" userLabel="EditController" customClass="EditController" customModule="iOS_Contactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gIZ-Rx-OIG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,6 +201,10 @@
                         <viewLayoutGuide key="safeArea" id="x5h-GH-Bbi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Editar Contactos" id="EQO-ms-dYs"/>
+                    <connections>
+                        <outlet property="txtCelularField" destination="rPd-OR-EhN" id="kHD-MY-YO1"/>
+                        <outlet property="txtNombreField" destination="3gM-G2-u77" id="p65-XR-aGU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DaL-h9-nee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

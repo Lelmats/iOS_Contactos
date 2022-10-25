@@ -27,7 +27,7 @@ class AddController: UIViewController
             txtCelular.text = contacto!.celular
         }
         else {
-            self.title = "Agregar Contacto"
+            self.title = "Agregar Contacto."
         }
         
         

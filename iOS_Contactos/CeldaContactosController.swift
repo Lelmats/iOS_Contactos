@@ -13,5 +13,5 @@ class CeldaContactosController: UITableViewCell {
     @IBOutlet weak var lblNombre: UILabel!
     @IBOutlet weak var lblCelular: UILabel!
     
-    
+
 }

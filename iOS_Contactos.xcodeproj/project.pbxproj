@@ -17,7 +17,8 @@
 		3D27A4352901A51000E11DB3 /* iOS_ContactosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4342901A51000E11DB3 /* iOS_ContactosUITests.swift */; };
 		3D27A4472901A9BD00E11DB3 /* Contacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4462901A9BD00E11DB3 /* Contacto.swift */; };
 		3D27A4492901AB9400E11DB3 /* CeldaContactosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A4482901AB9400E11DB3 /* CeldaContactosController.swift */; };
-		3D27A44B2901B24500E11DB3 /* ModifcarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A44A2901B24500E11DB3 /* ModifcarController.swift */; };
+		3D27A44B2901B24500E11DB3 /* EditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27A44A2901B24500E11DB3 /* EditController.swift */; };
+		3D361FE82908365D00FAE1A6 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D361FE72908365D00FAE1A6 /* AddController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,8 @@
 		3D27A4362901A51000E11DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D27A4462901A9BD00E11DB3 /* Contacto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacto.swift; sourceTree = "<group>"; };
 		3D27A4482901AB9400E11DB3 /* CeldaContactosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaContactosController.swift; sourceTree = "<group>"; };
-		3D27A44A2901B24500E11DB3 /* ModifcarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifcarController.swift; sourceTree = "<group>"; };
+		3D27A44A2901B24500E11DB3 /* EditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditController.swift; sourceTree = "<group>"; };
+		3D361FE72908365D00FAE1A6 /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +158,8 @@
 			children = (
 				3D27A4162901A50E00E11DB3 /* ContactosController.swift */,
 				3D27A4482901AB9400E11DB3 /* CeldaContactosController.swift */,
-				3D27A44A2901B24500E11DB3 /* ModifcarController.swift */,
+				3D27A44A2901B24500E11DB3 /* EditController.swift */,
+				3D361FE72908365D00FAE1A6 /* AddController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -300,11 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D27A44B2901B24500E11DB3 /* ModifcarController.swift in Sources */,
+				3D27A44B2901B24500E11DB3 /* EditController.swift in Sources */,
 				3D27A4472901A9BD00E11DB3 /* Contacto.swift in Sources */,
 				3D27A4172901A50E00E11DB3 /* ContactosController.swift in Sources */,
 				3D27A4132901A50E00E11DB3 /* AppDelegate.swift in Sources */,
 				3D27A4152901A50E00E11DB3 /* SceneDelegate.swift in Sources */,
+				3D361FE82908365D00FAE1A6 /* AddController.swift in Sources */,
 				3D27A4492901AB9400E11DB3 /* CeldaContactosController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

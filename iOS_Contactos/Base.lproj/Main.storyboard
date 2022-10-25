@@ -23,11 +23,11 @@
                                     <constraint firstAttribute="height" constant="808" id="Tlp-c3-TkG"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaContactos" rowHeight="85" id="Jyf-wL-E1u" customClass="CeldaContactosController" customModule="iOS_Contactos" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="celdaContactos" rowHeight="85" id="Jyf-wL-E1u" customClass="CeldaContactosController" customModule="iOS_Contactos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jyf-wL-E1u" id="VKA-q6-EFR" customClass="CeldaContactosController" customModule="iOS_Contactos" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yki-Jl-mzr">
@@ -44,19 +44,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRw-c7-Jlg">
-                                                    <rect key="frame" x="354" y="10" width="40" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Editar"/>
-                                                    <connections>
-                                                        <segue destination="KzS-Ke-d6B" kind="show" id="n86-aQ-bC2"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblCelular" destination="186-Ji-U0Z" id="g6q-uc-5V4"/>
                                             <outlet property="lblNombre" destination="yki-Jl-mzr" id="d13-np-opk"/>
+                                            <segue destination="KzS-Ke-d6B" kind="show" identifier="goToEdit" id="Z0H-6o-yHY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -76,9 +69,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contactos" id="p85-Ac-WdE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fbu-wl-ZNA">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="fBF-E0-aAO">
                             <connections>
-                                <segue destination="TJj-tC-rv0" kind="show" id="WL8-QZ-p9g"/>
+                                <segue destination="TJj-tC-rv0" kind="show" identifier="goToAdd" id="86t-1f-0xU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -93,7 +86,7 @@
         <!--AddController-->
         <scene sceneID="UHp-ll-Edj">
             <objects>
-                <viewController id="TJj-tC-rv0" userLabel="AddController" sceneMemberID="viewController">
+                <viewController id="TJj-tC-rv0" userLabel="AddController" customClass="AddController" customModule="iOS_Contactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWu-8g-w6T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,14 +104,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telèfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuQ-vZ-KYx">
-                                <rect key="frame" x="28" y="250" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEU-8h-QtG">
-                                <rect key="frame" x="28" y="138" width="117" height="40"/>
+                                <rect key="frame" x="28" y="250" width="262" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
                                 <nil key="textColor"/>
@@ -129,12 +115,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="doTapUpdate:" destination="TJj-tC-rv0" eventType="touchUpInside" id="q5i-Jb-dUH"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEU-8h-QtG">
+                                <rect key="frame" x="28" y="138" width="262" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fuo-eS-wVX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Agregar Contactos" id="xRX-gd-7Y3"/>
+                    <connections>
+                        <outlet property="txtCelular" destination="qmi-qq-FNv" id="uzV-xf-o0b"/>
+                        <outlet property="txtNombre" destination="Tur-Xe-cXL" id="AyE-U0-nCb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTy-VZ-yAK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,14 +177,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telèfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqM-TX-x2r">
-                                <rect key="frame" x="28" y="250" width="125" height="40"/>
+                                <rect key="frame" x="28" y="250" width="358" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEt-jZ-LGV">
-                                <rect key="frame" x="28" y="138" width="117" height="40"/>
+                                <rect key="frame" x="28" y="138" width="358" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
                                 <nil key="textColor"/>
@@ -195,6 +195,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="doTapUpdate:" destination="KzS-Ke-d6B" eventType="touchUpInside" id="mzl-J5-C2D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -208,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DaL-h9-nee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103" y="512"/>
+            <point key="canvasLocation" x="1102.8985507246377" y="511.60714285714283"/>
         </scene>
     </scenes>
 </document>

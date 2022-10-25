@@ -9,6 +9,7 @@
 import UIKit
 
 class ContactosController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var tvContactos: UITableView!
     var Contactos : [Contacto] = []
 
@@ -35,10 +36,34 @@ class ContactosController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         Contactos.append(Contacto(nombre: "Max Rivera",celular: "6442003929" ))
+        Contactos.append(Contacto(nombre: "Sergio Rivera",celular: "1231231213" ))
 
+        
+        tvContactos.reloadData()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "goToEdit" {
+            let destino = segue.destination as! EditController
+            destino.contacto = Contactos[tvContactos.indexPathForSelectedRow!.row]
+            destino.callbackUpdate = actualizarTexto
+        } else if segue.identifier == "goToAdd" {
+            let destino = segue.destination as! AddController
+            destino.contacto = nil
+            destino.callbackAdd = updateContactos
+        } 
+
+    }
+    func updateContactos(contacto: Contacto){
+        Contactos.append(contacto)
+        tvContactos.reloadData()
+    }
+    func actualizarTexto(){
+        tvContactos.reloadData()
+    }
 }
 
